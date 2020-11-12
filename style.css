@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.general-box{
+
+    width: 1672px;
+    height: 782px;
+    position: absolute;
+    left: 500px;
+ 
+
+}
+table{
+    border: 1px solid black
+
+}
+
+td{
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: center;
+}
+input{
+
+    color: black;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    outline: none;
+    background-color: palevioletred;
+
+}
+
+#cell-1, #cell-2, #cell-3{ border-top: 5px solid black; }
+#cell-1, #cell-11, #cell-21{ border-left: 5px solid black; }
+#cell-21, #cell-22, #cell-23{ border-bottom: 5px solid black; }
+#cell-3, #cell-13, #cell-23{ border-right: 5px solid black; }
+
+#cell-4, #cell-5, #cell-6{ border-top: 5px solid black; }
+#cell-4, #cell-14, #cell-24{ border-left:  5px solid black; }
+#cell-24, #cell-25, #cell-26{ border-bottom:  5px solid black; }
+#cell-6, #cell-16, #cell-26{ border-right: 5px solid black }
+
+#cell-7, #cell-8, #cell-9{ border-top: 5px solid black;}
+#cell-7, #cell-17, #cell-27{ border-left:  5px solid black }
+#cell-27, #cell-28, #cell-29{ border-bottom:  5px solid black }
+#cell-9, #cell-19, #cell-29{ border-right:  5px solid black;}
+
+#cell-31, #cell-32, #cell-33{ border-top: 5px solid black; }
+#cell-31, #cell-41, #cell-51{ border-left: 5px solid black; }
+#cell-51, #cell-52, #cell-53{ border-bottom: 5px solid black; }
+#cell-33, #cell-43, #cell-53{ border-right: 5px solid black; }
+
+#cell-34, #cell-35, #cell-36{ border-top: 5px solid black; }
+#cell-34, #cell-44, #cell-54{ border-left:  5px solid black; }
+#cell-54, #cell-55, #cell-56{ border-bottom:  5px solid black; }
+#cell-36, #cell-46, #cell-56{ border-right: 5px solid black }
+
+#cell-37, #cell-38, #cell-39{ border-top: 5px solid black;}
+#cell-37, #cell-47, #cell-57{ border-left:  5px solid black }
+#cell-57, #cell-58, #cell-59{ border-bottom:  5px solid black }
+#cell-39, #cell-49, #cell-59{ border-right:  5px solid black;}
+
+#cell-61, #cell-62, #cell-63{ border-top: 5px solid black; }
+#cell-61, #cell-71, #cell-81{ border-left: 5px solid black; }
+#cell-81, #cell-82, #cell-83{ border-bottom: 5px solid black; }
+#cell-63, #cell-73, #cell-83{ border-right: 5px solid black; }
+
+#cell-64, #cell-65, #cell-66{ border-top: 5px solid black; }
+#cell-64, #cell-74, #cell-84{ border-left:  5px solid black; }
+#cell-84, #cell-85, #cell-86{ border-bottom:  5px solid black; }
+#cell-66, #cell-76, #cell-86{ border-right: 5px solid black }
+
+#cell-67, #cell-68, #cell-69{ border-top: 5px solid black;}
+#cell-67, #cell-77, #cell-87{ border-left:  5px solid black }
+#cell-87, #cell-88, #cell-89{ border-bottom:  5px solid black }
+#cell-69, #cell-79, #cell-89{ border-right:  5px solid black;}
