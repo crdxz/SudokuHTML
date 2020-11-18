@@ -79,3 +79,35 @@ input{
 #cell-67, #cell-77, #cell-87{ border-left:  5px solid black }
 #cell-87, #cell-88, #cell-89{ border-bottom:  5px solid black }
 #cell-69, #cell-79, #cell-89{ border-right:  5px solid black;}
+/*button{
+    border: 1000px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: solid;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+}*/
+#check{
+    background-color:#375E97;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+}
+#new{
+    background-color: #FB6542;
+    color: white;
+}
+
+#solution{
+    background-color: #FFBB00;
+    color: white;
+    
+    
+}
+#score{
+    background-color: #3F681C;
+    color: white;
+   
+}
