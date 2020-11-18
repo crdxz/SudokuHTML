@@ -3,152 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudoku</title>
     <link rel="stylesheet" href="style.css">
+    <title>Sudoku</title>
+    
 </head>
 <body>
     <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: black;"></path></svg>
     </div>
-    <h1>SUDOKU</h1>
-    <div class="general-box">       
+    <div id=Sudoku>
+        <h1>SUDOKU</h1>
+        <div class="general-box">       
 
-        <table>
-                <tr>
-                    <td> <input type="text" id="cell-1" > </td>  
-                    <td> <input type="text" id="cell-2" > </td>  
-                    <td> <input type="text" id="cell-3" > </td>  
+            <table>
+                    <tr>
+                        <td> <input type="text" id="cell-1" > </td>  
+                        <td> <input type="text" id="cell-2" > </td>  
+                        <td> <input type="text" id="cell-3" > </td>  
 
-                    <td> <input type="text" id="cell-4" > </td>  
-                    <td> <input type="text" id="cell-5" > </td>  
-                    <td> <input type="text" id="cell-6" > </td> 
+                        <td> <input type="text" id="cell-4" > </td>  
+                        <td> <input type="text" id="cell-5" > </td>  
+                        <td> <input type="text" id="cell-6" > </td> 
 
-                    <td> <input type="text" id="cell-7" > </td>  
-                    <td> <input type="text" id="cell-8" > </td>  
-                    <td> <input type="text" id="cell-9" > </td>    
-                             
-                </tr>
-                </tr>
-                    <td> <input type="text" id="cell-11" > </td>  
-                    <td> <input type="text" id="cell-12" > </td>  
-                    <td> <input type="text" id="cell-13" > </td> 
+                        <td> <input type="text" id="cell-7" > </td>  
+                        <td> <input type="text" id="cell-8" > </td>  
+                        <td> <input type="text" id="cell-9" > </td>    
+                                    
+                    </tr>
+                    </tr>
+                        <td> <input type="text" id="cell-11" > </td>  
+                        <td> <input type="text" id="cell-12" > </td>  
+                        <td> <input type="text" id="cell-13" > </td> 
 
-                    <td> <input type="text" id="cell-14" > </td>  
-                    <td> <input type="text" id="cell-15" > </td>  
-                    <td> <input type="text" id="cell-16" > </td> 
+                        <td> <input type="text" id="cell-14" > </td>  
+                        <td> <input type="text" id="cell-15" > </td>  
+                        <td> <input type="text" id="cell-16" > </td> 
 
-                    <td> <input type="text" id="cell-17" > </td>  
-                    <td> <input type="text" id="cell-18" > </td>  
-                    <td> <input type="text" id="cell-19" > </td>    
+                        <td> <input type="text" id="cell-17" > </td>  
+                        <td> <input type="text" id="cell-18" > </td>  
+                        <td> <input type="text" id="cell-19" > </td>    
 
-                </tr>
-                <tr> 
-                    <td> <input type="text" id="cell-21" > </td>  
-                    <td> <input type="text" id="cell-22" > </td>  
-                    <td> <input type="text" id="cell-23" > </td>  
+                    </tr>
+                    <tr> 
+                        <td> <input type="text" id="cell-21" > </td>  
+                        <td> <input type="text" id="cell-22" > </td>  
+                        <td> <input type="text" id="cell-23" > </td>  
 
-                    <td> <input type="text" id="cell-24" > </td>  
-                    <td> <input type="text" id="cell-25" > </td>  
-                    <td> <input type="text" id="cell-26" > </td> 
+                        <td> <input type="text" id="cell-24" > </td>  
+                        <td> <input type="text" id="cell-25" > </td>  
+                        <td> <input type="text" id="cell-26" > </td> 
 
-                    <td> <input type="text" id="cell-27" > </td>  
-                    <td> <input type="text" id="cell-28" > </td>  
-                    <td> <input type="text" id="cell-29" > </td>  
+                        <td> <input type="text" id="cell-27" > </td>  
+                        <td> <input type="text" id="cell-28" > </td>  
+                        <td> <input type="text" id="cell-29" > </td>  
 
-                </tr> 
-                <tr> 
-                    <td> <input type="text" id="cell-31" > </td>  
-                    <td> <input type="text" id="cell-32" > </td>  
-                    <td> <input type="text" id="cell-33" > </td>  
+                    </tr> 
+                    <tr> 
+                        <td> <input type="text" id="cell-31" > </td>  
+                        <td> <input type="text" id="cell-32" > </td>  
+                        <td> <input type="text" id="cell-33" > </td>  
 
-                    <td> <input type="text" id="cell-34" > </td>  
-                    <td> <input type="text" id="cell-35" > </td>  
-                    <td> <input type="text" id="cell-36" > </td> 
+                        <td> <input type="text" id="cell-34" > </td>  
+                        <td> <input type="text" id="cell-35" > </td>  
+                        <td> <input type="text" id="cell-36" > </td> 
 
-                    <td> <input type="text" id="cell-37" > </td>  
-                    <td> <input type="text" id="cell-38" > </td>  
-                    <td> <input type="text" id="cell-39" > </td>  
+                        <td> <input type="text" id="cell-37" > </td>  
+                        <td> <input type="text" id="cell-38" > </td>  
+                        <td> <input type="text" id="cell-39" > </td>  
 
-                </tr>
-                <tr> 
-                    <td> <input type="text" id="cell-41" > </td>  
-                    <td> <input type="text" id="cell-42" > </td>  
-                    <td> <input type="text" id="cell-43" > </td>  
+                    </tr>
+                    <tr> 
+                        <td> <input type="text" id="cell-41" > </td>  
+                        <td> <input type="text" id="cell-42" > </td>  
+                        <td> <input type="text" id="cell-43" > </td>  
 
-                    <td> <input type="text" id="cell-44" > </td>  
-                    <td> <input type="text" id="cell-45" > </td>  
-                    <td> <input type="text" id="cell-46" > </td> 
+                        <td> <input type="text" id="cell-44" > </td>  
+                        <td> <input type="text" id="cell-45" > </td>  
+                        <td> <input type="text" id="cell-46" > </td> 
 
-                    <td> <input type="text" id="cell-47" > </td>  
-                    <td> <input type="text" id="cell-48" > </td>  
-                    <td> <input type="text" id="cell-49" > </td>  
+                        <td> <input type="text" id="cell-47" > </td>  
+                        <td> <input type="text" id="cell-48" > </td>  
+                        <td> <input type="text" id="cell-49" > </td>  
 
-                </tr>
-                <tr> 
-                    <td> <input type="text" id="cell-51" > </td>  
-                    <td> <input type="text" id="cell-52" > </td>  
-                    <td> <input type="text" id="cell-53" > </td>  
+                    </tr>
+                    <tr> 
+                        <td> <input type="text" id="cell-51" > </td>  
+                        <td> <input type="text" id="cell-52" > </td>  
+                        <td> <input type="text" id="cell-53" > </td>  
 
-                    <td> <input type="text" id="cell-54" > </td>  
-                    <td> <input type="text" id="cell-55" > </td>  
-                    <td> <input type="text" id="cell-56" > </td> 
+                        <td> <input type="text" id="cell-54" > </td>  
+                        <td> <input type="text" id="cell-55" > </td>  
+                        <td> <input type="text" id="cell-56" > </td> 
 
-                    <td> <input type="text" id="cell-57" > </td>  
-                    <td> <input type="text" id="cell-58" > </td>  
-                    <td> <input type="text" id="cell-59" > </td>  
+                        <td> <input type="text" id="cell-57" > </td>  
+                        <td> <input type="text" id="cell-58" > </td>  
+                        <td> <input type="text" id="cell-59" > </td>  
 
-                </tr>
-                <tr> 
-                    <td> <input type="text" id="cell-61" > </td>  
-                    <td> <input type="text" id="cell-62" > </td>  
-                    <td> <input type="text" id="cell-63" > </td>  
+                    </tr>
+                    <tr> 
+                        <td> <input type="text" id="cell-61" > </td>  
+                        <td> <input type="text" id="cell-62" > </td>  
+                        <td> <input type="text" id="cell-63" > </td>  
 
-                    <td> <input type="text" id="cell-64" > </td>  
-                    <td> <input type="text" id="cell-65" > </td>  
-                    <td> <input type="text" id="cell-66" > </td> 
+                        <td> <input type="text" id="cell-64" > </td>  
+                        <td> <input type="text" id="cell-65" > </td>  
+                        <td> <input type="text" id="cell-66" > </td> 
 
-                    <td> <input type="text" id="cell-67" > </td>  
-                    <td> <input type="text" id="cell-68" > </td>  
-                    <td> <input type="text" id="cell-69" > </td>  
+                        <td> <input type="text" id="cell-67" > </td>  
+                        <td> <input type="text" id="cell-68" > </td>  
+                        <td> <input type="text" id="cell-69" > </td>  
 
-                </tr>
-                <tr> 
-                    <td> <input type="text" id="cell-71" > </td>  
-                    <td> <input type="text" id="cell-72" > </td>  
-                    <td> <input type="text" id="cell-73" > </td>  
+                    </tr>
+                    <tr> 
+                        <td> <input type="text" id="cell-71" > </td>  
+                        <td> <input type="text" id="cell-72" > </td>  
+                        <td> <input type="text" id="cell-73" > </td>  
 
-                    <td> <input type="text" id="cell-74" > </td>  
-                    <td> <input type="text" id="cell-75" > </td>  
-                    <td> <input type="text" id="cell-76" > </td> 
+                        <td> <input type="text" id="cell-74" > </td>  
+                        <td> <input type="text" id="cell-75" > </td>  
+                        <td> <input type="text" id="cell-76" > </td> 
 
-                    <td> <input type="text" id="cell-77" > </td> 
-                    <td> <input type="text" id="cell-78" > </td>  
-                    <td> <input type="text" id="cell-79" > </td>  
-                             
-                </tr>
-                    <td> <input type="text" id="cell-81" > </td>  
-                    <td> <input type="text" id="cell-82" > </td>  
-                    <td> <input type="text" id="cell-83" > </td>  
+                        <td> <input type="text" id="cell-77" > </td> 
+                        <td> <input type="text" id="cell-78" > </td>  
+                        <td> <input type="text" id="cell-79" > </td>  
+                                    
+                    </tr>
+                        <td> <input type="text" id="cell-81" > </td>  
+                        <td> <input type="text" id="cell-82" > </td>  
+                        <td> <input type="text" id="cell-83" > </td>  
 
-                    <td> <input type="text" id="cell-84" > </td>  
-                    <td> <input type="text" id="cell-85" > </td>  
-                    <td> <input type="text" id="cell-86" > </td> 
+                        <td> <input type="text" id="cell-84" > </td>  
+                        <td> <input type="text" id="cell-85" > </td>  
+                        <td> <input type="text" id="cell-86" > </td> 
 
-                    <td> <input type="text" id="cell-87" > </td> 
-                    <td> <input type="text" id="cell-88" > </td>  
-                    <td> <input type="text" id="cell-89" > </td>  
+                        <td> <input type="text" id="cell-87" > </td> 
+                        <td> <input type="text" id="cell-88" > </td>  
+                        <td> <input type="text" id="cell-89" > </td>  
 
-                </tr>
-                </tr>
-                </tr>
-        </table>
+                    </tr>
+                    </tr>
+                    </tr>
+            </table>
 
-    </div>  
-</body>
-<script src="script.js"></script>
+        </div>  
+        </body>
+        <button id=check type="button">Check</button> 
+        <button id=new type="button">New</button> 
+        <button id=solve type="button">Solve</button> 
+        <button id=score type="button">Score</button>
+        <div id=Rulers>
+            <h3><b>Rule 0: </b>Each region of the sudoku is equals a 9x9 squares more small</h3>
+            <h3><b>Rule 1: </b>Type in each empty box a number between  1 - 9 </h3>
+            <h3><b>Rule 2: </b>In the same row can not be repeated the same number</h3>
+            <h3><b>Rule 3: </b>In the same columm can not be repeated the same number </h3>
+            <h3><b>Rule 4: </b>Cannot be repeated the same number in the same region</h3>
+            <h3><b>Rule 5: </b>The solve is <b>unique</b></h3>
+        </div>
 
-<button id=check type="button">Check</button> 
-<button id=new type="button">New</button> 
-<button id=solution type="button">Solution</button> 
-<button id=score type="button">Score</button> 
+    </div>
+   <script src="script.js"></script>
+
 
 </html>

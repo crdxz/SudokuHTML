@@ -6,8 +6,8 @@
 
     width: 1672px;
     height: 782px;
-    position: absolute;
-    left: 500px;
+    position: relative;
+    left: 8.2cm;
  
 
 }
@@ -79,7 +79,7 @@ input{
 #cell-67, #cell-77, #cell-87{ border-left:  5px solid black }
 #cell-87, #cell-88, #cell-89{ border-bottom:  5px solid black }
 #cell-69, #cell-79, #cell-89{ border-right:  5px solid black;}
-/*button{
+button{
     border: 1000px;
     padding: 15px 32px;
     text-align: center;
@@ -87,27 +87,40 @@ input{
     font-size: 30px;
     margin: 4px 2px;
     cursor: pointer;
-}*/
+}
 #check{
     background-color:#375E97;
     color: white;
     position: absolute;
-    bottom: 0px;
-    right: 5px;
+    bottom: 12cm;
+    left: 2cm;;
+
 }
 #new{
     background-color: #FB6542;
     color: white;
+    position: absolute;
+    bottom: 15cm;
+    left: 2.3cm;
 }
 
-#solution{
+#solve{
     background-color: #FFBB00;
     color: white;
-    
-    
+    position: absolute;
+    left: 25cm;
+    bottom: 15cm;
 }
 #score{
     background-color: #3F681C;
     color: white;
-   
+    position: absolute;
+    bottom: 12cm;
+    left: 25cm;
+}
+#Rulers{
+    position: absolute;
+    bottom: 1cm;
+    left: 8cm;
+
 }
