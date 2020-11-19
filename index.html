@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <title>Sudoku</title>
     
+   <script src="script.js"></script>
+    
 </head>
 <body>
     <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: black;"></path></svg>
@@ -146,7 +148,7 @@
 
         </div>  
         </body>
-        <button id=check type="button">Check</button> 
+        <button id=check type="button" onclick="getAlmacenar()">Check</button> 
         <button id=new type="button">New</button> 
         <button id=solve type="button">Solve</button> 
         <button id=score type="button">Score</button>
@@ -160,7 +162,6 @@
         </div>
 
     </div>
-   <script src="script.js"></script>
 
 
 </html>
