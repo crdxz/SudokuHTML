@@ -1,26 +1,30 @@
-/*var getDatos = function(){
-    var num1 = document.getElementById('cell-1').value;
-
-    console.log(num1);
-
-    let number = num1;
-    number;
-    console.log(number);
-
-}*/
-var getAlmacenar = function(){
-
-    console.log('entra a la funcion');
-
-    for(let i = 1; i < 10; i++){
-
-        var numero = document.getElementById('cell-' + i).value;
-        console.log('cell-' + i);
-        
-        let matriz = [numero];
-        matriz;
-        console.log(matriz);
-    }
-    
-        
+//Declaración del array de 10 posiciones
+/*var matriz = new Array(9);
+//Bucle para meter en cada posición otros array de 10
+for(var i=0; i<9; i++) {
+    matriz[i] = new Array(9);
 }
+*/
+
+var matriz = [
+    new Array(9),new Array(9),new Array(9),
+    new Array(9),new Array(9),new Array(9),
+    new Array(9),new Array(9),new Array(9)
+];
+
+var ciclo = 0;
+
+for(var  f = 0; f < 9; f++){
+    for(var c = 0; c < 9; c++){
+        var celda = "f"+f+"c"+c;
+        var valorCelda = document.getElementById(celda).value;
+        matriz[f][c] = valorCelda;     
+    }
+    ciclo++;
+}
+
+for(var  i = 0; i < matriz.length; i++){
+    for(var j = 0; j < matriz.length; j++){
+        document.writeln(matriz[i][j])
+    }
+}       
