@@ -1,191 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Sudoku</title>
-    <script src="script.js"></script>
-
-
+  
 </head>
-
 <body>
-    <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-            style="height: 100%; width: 100%;">
-            <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
-                style="stroke: none; fill: black;"></path>
-        </svg>
-    </div>
     <h1>SUDOKU</h1>
+    <div id="contenedor">
+        <div id= "rulers">
+            <div id="rulersText">
+                <br><br> <b>RULER 1: </b>Each region of the sudoku is equals a 9x9 squares more small <br><br> <b>RULER 2: </b> Type in each empty box a number between  1 - 9 <br><br> <b>RULER 3: </b> In the same row can not be repeated the same number <br><br> <b>RULER 4: </b> In the same columm can not be repeated the same number <br><br> <b>RULER 5: </b> Cannot be repeated the same number in the same region <br><br><b>RULER 6: </b> The solve is unique </div>
+            </div>
+            <div class="linea"></div>
+            <div class="contadores"> 
+                <div class="score">Score</div> 
+                <div class="timer">Time</div>  
+                <div class="scoreMostrar">
+                    <div id="scoreNumber">100000</div>
+                </div>
+                <div class="timerMostrar">
+                    <div id="timerNumber">0.0s</div>
+                </div>
+            </div>   
+            <div id="solucion"></div>        
+        <table class="tablero">
+                <tr>
+                    <td> <input type="text" id="f0c0" maxlength="1" onkeypress="return soloNumeros(event)"> </td>  
+                    <td> <input type="text" id="f0c1" maxlength="1" > </td>  
+                    <td> <input type="text" id="f0c2" maxlength="1"> </td>  
 
-    <div class="general-box">
+                    <td> <input type="text" id="f0c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f0c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f0c5" maxlength="1"> </td> 
 
-        <table>
-            <tr>
-                <td> <input type="text" id="1"> </td>
-                <td> <input type="text" id="2"> </td>
-                <td> <input type="text" id="3"> </td>
+                    <td> <input type="text" id="f0c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f0c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f0c8" maxlength="1"> </td>    
+                             
+                </tr>
+                </tr>
+                    <td> <input type="text" id="f1c0" maxlength="1"> </td>  
+                    <td> <input type="text" id="f1c1" maxlength="1"> </td>  
+                    <td> <input type="text" id="f1c2" maxlength="1"> </td>  
 
-                <td> <input type="text" id="4"> </td>
-                <td> <input type="text" id="5"> </td>
-                <td> <input type="text" id="6"> </td>
+                    <td> <input type="text" id="f1c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f1c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f1c5" maxlength="1"> </td> 
 
-                <td> <input type="text" id="7"> </td>
-                <td> <input type="text" id="8"> </td>
-                <td> <input type="text" id="9"> </td>
+                    <td> <input type="text" id="f1c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f1c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f1c8" maxlength="1"> </td>     
+                </tr>
+                <tr> 
+                    <td> <input type="text" id="f2c0" maxlength="1"> </td>  
+                    <td> <input type="text" id="f2c1" maxlength="1"> </td>  
+                    <td> <input type="text" id="f2c2" maxlength="1"> </td>  
 
-            </tr>
-            <tr>
-                <td> <input type="text" id="10"> </td>
-                <td> <input type="text" id="11"> </td>
-                <td> <input type="text" id="12"> </td>
+                    <td> <input type="text" id="f2c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f2c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f2c5" maxlength="1"> </td> 
 
-                <td> <input type="text" id="13"> </td>
-                <td> <input type="text" id="14"> </td>
-                <td> <input type="text" id="15"> </td>
+                    <td> <input type="text" id="f2c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f2c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f2c8" maxlength="1"> </td>   
+                </tr> 
+                <tr> 
+                    <td> <input type="text" id="f3c0" maxlength="1"> </td>  
+                    <td> <input type="text" id="f3c1" maxlength="1"> </td>  
+                    <td> <input type="text" id="f3c2" maxlength="1"> </td>  
 
-                <td> <input type="text" id="16"> </td>
-                <td> <input type="text" id="17"> </td>
-                <td> <input type="text" id="18"> </td>
+                    <td> <input type="text" id="f3c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f3c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f3c5" maxlength="1"> </td> 
 
-            </tr>
-            <tr>
-                <td> <input type="text" id="19"> </td>
-                <td> <input type="text" id="20"> </td>
-                <td> <input type="text" id="21"> </td>
+                    <td> <input type="text" id="f3c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f3c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f3c8" maxlength="1"> </td>  
+                </tr>
+                <tr> 
+                    <td> <input type="text" id="f4c0" maxlength="1"> </td>  
+                    <td> <input type="text" id="f4c1" maxlength="1"> </td>  
+                    <td> <input type="text" id="f4c2" maxlength="1"> </td>  
 
-                <td> <input type="text" id="22"> </td>
-                <td> <input type="text" id="23"> </td>
-                <td> <input type="text" id="24"> </td>
+                    <td> <input type="text" id="f4c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f4c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f4c5" maxlength="1"> </td> 
 
-                <td> <input type="text" id="25"> </td>
-                <td> <input type="text" id="26"> </td>
-                <td> <input type="text" id="27"> </td>
+                    <td> <input type="text" id="f4c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f4c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f4c8" maxlength="1"> </td>   
+                </tr>
+                <tr> 
+                    <td> <input type="text" id="f5c0" maxlength="1"> </td>  
+                    <td> <input type="text" id="f5c1" maxlength="1"> </td>  
+                    <td> <input type="text" id="f5c2" maxlength="1"> </td>  
 
-            </tr>
-            <tr>
-                <td> <input type="text" id="28"> </td>
-                <td> <input type="text" id="29"> </td>
-                <td> <input type="text" id="30"> </td>
+                    <td> <input type="text" id="f5c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f5c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f5c5" maxlength="1"> </td> 
 
-                <td> <input type="text" id="31"> </td>
-                <td> <input type="text" id="32"> </td>
-                <td> <input type="text" id="33"> </td>
+                    <td> <input type="text" id="f5c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f5c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f5c8" maxlength="1"> </td>   
+                </tr>
+                <tr> 
+                    <td> <input type="text" id="f6c0" maxlength="1"> </td>  
+                    <td> <input type="text" id="f6c1" maxlength="1"> </td>  
+                    <td> <input type="text" id="f6c2" maxlength="1"> </td>  
 
-                <td> <input type="text" id="34"> </td>
-                <td> <input type="text" id="35"> </td>
-                <td> <input type="text" id="36"> </td>
+                    <td> <input type="text" id="f6c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f6c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f6c5" maxlength="1"> </td> 
 
-            </tr>
-            <tr>
-                <td> <input type="text" id="37"> </td>
-                <td> <input type="text" id="38"> </td>
-                <td> <input type="text" id="39"> </td>
+                    <td> <input type="text" id="f6c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f6c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f6c8" maxlength="1"> </td>   
+                </tr>
+                <tr> 
+                    <td> <input type="text" id="f7c0" maxlength="1"> </td>  
+                    <td> <input type="text" id="f7c1" maxlength="1"> </td>  
+                    <td> <input type="text" id="f7c2" maxlength="1"> </td>  
 
-                <td> <input type="text" id="40"> </td>
-                <td> <input type="text" id="41"> </td>
-                <td> <input type="text" id="42"> </td>
+                    <td> <input type="text" id="f7c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f7c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f7c5" maxlength="1"> </td> 
 
-                <td> <input type="text" id="43"> </td>
-                <td> <input type="text" id="44"> </td>
-                <td> <input type="text" id="45"> </td>
+                    <td> <input type="text" id="f7c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f7c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f7c8" maxlength="1"> </td>                     
+                </tr>
+                    <td> <input type="text" id="f8c0" maxlength="1"> </td>  
+                    <td> <input type="text" id="f8c1" maxlength="1"> </td>  
+                    <td> <input type="text" id="f8c2" maxlength="1"> </td>  
 
-            </tr>
-            <tr>
-                <td> <input type="text" id="46"> </td>
-                <td> <input type="text" id="47"> </td>
-                <td> <input type="text" id="48"> </td>
+                    <td> <input type="text" id="f8c3" maxlength="1"> </td>  
+                    <td> <input type="text" id="f8c4" maxlength="1"> </td>  
+                    <td> <input type="text" id="f8c5" maxlength="1"> </td> 
 
-                <td> <input type="text" id="49"> </td>
-                <td> <input type="text" id="50"> </td>
-                <td> <input type="text" id="51"> </td>
-
-                <td> <input type="text" id="52"> </td>
-                <td> <input type="text" id="53"> </td>
-                <td> <input type="text" id="54"> </td>
-
-            </tr>
-            <tr>
-                <td> <input type="text" id="55"> </td>
-                <td> <input type="text" id="56"> </td>
-                <td> <input type="text" id="57"> </td>
-
-                <td> <input type="text" id="58"> </td>
-                <td> <input type="text" id="59"> </td>
-                <td> <input type="text" id="60"> </td>
-
-                <td> <input type="text" id="61"> </td>
-                <td> <input type="text" id="62"> </td>
-                <td> <input type="text" id="63"> </td>
-
-            </tr>
-            <tr>
-                <td> <input type="text" id="64"> </td>
-                <td> <input type="text" id="65"> </td>
-                <td> <input type="text" id="66"> </td>
-
-                <td> <input type="text" id="67"> </td>
-                <td> <input type="text" id="68"> </td>
-                <td> <input type="text" id="69"> </td>
-
-                <td> <input type="text" id="70"> </td>
-                <td> <input type="text" id="71"> </td>
-                <td> <input type="text" id="72"> </td>
-
-            </tr>
-            <td> <input type="text" id="73"> </td>
-            <td> <input type="text" id="74"> </td>
-            <td> <input type="text" id="75"> </td>
-
-            <td> <input type="text" id="76"> </td>
-            <td> <input type="text" id="77"> </td>
-            <td> <input type="text" id="78"> </td>
-
-            <td> <input type="text" id="79"> </td>
-            <td> <input type="text" id="80"> </td>
-            <td> <input type="text" id="81"> </td>
-
-            </tr>
-            </tr>
-            </tr>
+                    <td> <input type="text" id="f8c6" maxlength="1"> </td>  
+                    <td> <input type="text" id="f8c7" maxlength="1"> </td>  
+                    <td> <input type="text" id="f8c8" maxlength="1"> </td>   
+                </tr>
+                </tr>
+                </tr>
         </table>
+    <div class= "botones">
+        <button id=new type="button" onclick="generarTablero();">New </button> 
+        <button id=check type="button" onclick="check();">Check</button> 
+        <button id=solve type="button" onclick="initiate();" >Solve</button> 
+    </div>   
+    </div>  
+    <script src="script.js"></script> 
 
-    </div>
-    <button id=check type="button">Check</button>
-    <button id=new type="button" onclick="generarTablero()">New </button>
-    <button id=solve type="button" onclick="initiate()">Solve</button>
-    <button id=score type="button">Score</button>
-    <div id=Rulers>
-        <h3><b>Rule 0: </b>Each region of the sudoku is equals a 9x9 squares more small</h3>
-        <h3><b>Rule 1: </b>Type in each empty box a number between 1 - 9 </h3>
-        <h3><b>Rule 2: </b>In the same row can not be repeated the same number</h3>
-        <h3><b>Rule 3: </b>In the same columm can not be repeated the same number </h3>
-        <h3><b>Rule 4: </b>Cannot be repeated the same number in the same region</h3>
-        <h3><b>Rule 5: </b>The solve is <b>unique</b></h3>
-    </div>
-
-
-    </div>
-    <div id="respuestasCorrectas">
-        <p id="fila 1"></p>
-        <p id="fila 2"></p>
-        <p id="fila 3"></p>
-        <p id="fila 4"></p>
-        <p id="fila 5"></p>
-        <p id="fila 6"></p>
-        <p id="fila 7"></p>
-        <p id="fila 8"></p>
-        <p id="fila 9"></p>
-    </div>
-    <script>
-        const marcadorPosiciones = " ? "
-        for (var i = 1; i <= 9; i++) {
-            document.getElementById("fila " + String(i)).innerHTML = marcadorPosiciones + "\xa0\xa0\xa0\xa0\xa0\xa0" + marcadorPosiciones + "\xa0\xa0\xa0\xa0\xa0\xa0" + marcadorPosiciones + "\xa0\xa0\xa0\xa0\xa0\xa0" + marcadorPosiciones + "\xa0\xa0\xa0\xa0\xa0\xa0" + marcadorPosiciones + "\xa0\xa0\xa0\xa0\xa0\xa0" + marcadorPosiciones + "\xa0\xa0\xa0\xa0\xa0\xa0" + marcadorPosiciones + "\xa0\xa0\xa0\xa0\xa0\xa0" + marcadorPosiciones + "\xa0\xa0\xa0\xa0\xa0\xa0" + marcadorPosiciones
-        }
-    </script>
-    <script src="solve.js"></script>
 </body>
-
 </html>
